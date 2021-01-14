@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-test</title>
+</head>
+<body>
+<div>
+クリエイトリアクトアップを使用しない場合、CDNで外部ファイルを読み込めば使用できる。
+使用する場合は、VSCからプロジェクトへ移動し「npx create-react-app react-project」をコマンドで実行する。
+※npx＝nodeの中に入っている実行ファイルの一種
+</div>
+    <div id="display" class="content">テスト用のテキストです。</div>
+    <div class="Btn">ボタンです。</div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+<script>
+let dom = document.getElementById("display");
+let el = React.createElement(
+    "p",{},"reactが動きました。"
+)
+ReactDOM.render(el,dom);
+</script>
+</html>
